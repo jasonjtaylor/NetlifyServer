@@ -1,9 +1,13 @@
 [build]
   publish = "."
 
-# Redirect site visitors to your local TAK server
-[[redirects]]
-  from = "/*"
-  to = "https://192.168.2.1:8446/"
-  status = 302
-  force = true
+# Redirect to your TAK server via Cloudflare Tunnel (Option A)
+# 1. Run: ./start-tunnel.sh   (keep it running)
+# 2. Copy the https://....trycloudflare.com URL it prints
+# 3. Uncomment the block below and set "to" to that URL (e.g. "https://abc-def.trycloudflare.com/")
+# 4. git add netlify.toml && git commit -m "Add tunnel redirect" && git push
+# [[redirects]]
+#   from = "/*"
+#   to = "https://YOUR_TUNNEL_URL.trycloudflare.com/"
+#   status = 302
+#   force = true

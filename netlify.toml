@@ -1,3 +1,9 @@
 [build]
   publish = "."
-  # No build command — static site only
+
+# Redirect site visitors to your local TAK server
+[[redirects]]
+  from = "/*"
+  to = "https://192.168.2.1:8446/"
+  status = 302
+  force = true

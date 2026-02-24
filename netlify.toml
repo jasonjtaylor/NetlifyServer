@@ -4,6 +4,6 @@
 # Redirect to your TAK server via Cloudflare Tunnel (Option A)
 [[redirects]]
   from = "/*"
-  to = "https://syntax-operating-resist-dates.trycloudflare.com/"
+  to = "https://cited-yarn-scenic-medicines.trycloudflare.com/"
   status = 302
   force = true

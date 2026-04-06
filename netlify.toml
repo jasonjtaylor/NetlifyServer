@@ -2,8 +2,23 @@
   publish = "."
 
 # Redirect to your TAK server via Cloudflare Tunnel (Option A)
+# Root → tunnel root (/* alone does not match "/")
+[[redirects]]
+  from = "/"
+  to = "https://philadelphia-whale-struct-graduated.trycloudflare.com/"
+  status = 302
+  force = true
+
+# WebTAK deep paths (e.g. /webtak/index.html) — list before the catch-all
+[[redirects]]
+  from = "/webtak/*"
+  to = "https://philadelphia-whale-struct-graduated.trycloudflare.com/webtak/:splat"
+  status = 302
+  force = true
+
+# Everything else (admin, API paths, etc.) — same path on the tunnel
 [[redirects]]
   from = "/*"
-  to = "https://philadelphia-whale-struct-graduated.trycloudflare.com/"
+  to = "https://philadelphia-whale-struct-graduated.trycloudflare.com/:splat"
   status = 302
   force = true

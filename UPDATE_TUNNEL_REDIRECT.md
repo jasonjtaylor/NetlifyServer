@@ -17,9 +17,8 @@ After the file is saved, please commit this change with the message 'update tunn
 
 **Option 2 – Manual**  
 1. Open `netlify.toml`.  
-2. Uncomment the `[[redirects]]` block (remove the `#` from the four lines).  
-3. Set `to = "https://your-actual-url.trycloudflare.com/"`.  
-4. Run: `git add netlify.toml && git commit -m "update tunnel redirect" && git push`
+2. Replace **every** tunnel hostname in the `to =` lines with your new URL (there are **three** `[[redirects]]` blocks: `/`, `/webtak/*`, and `/*`).  
+3. Run: `git add netlify.toml && git commit -m "update tunnel redirect" && git push`
 
 ---
 
